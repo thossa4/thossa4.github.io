@@ -8,7 +8,7 @@ const SITE = {
   profile: {
     name: "Tanvir Hossain",
     initials: "TH",
-    title: "Ph.D. Student in Geography",
+    title: "Ph.D. Candidate in Geography",
     affiliation: "Department of Geography & Anthropology · Louisiana State University",
     location: "Baton Rouge, LA",
     // Put your photo at assets/headshot.jpg (square works best). If the file is missing, initials show instead.
@@ -17,6 +17,7 @@ const SITE = {
     heroImage: "assets/art/hero.jpg",
     bio: [
       "I'm a geographer working where GIS, remote sensing, and machine learning meet natural hazards. My research builds GeoAI frameworks for multi-hazard susceptibility mapping and land-use vulnerability assessment in coastal Louisiana, so communities and planners can see risk before it arrives.",
+      "I recently passed my doctoral general examination and defended my dissertation proposal, which examines coastal hazards, agricultural damage, and community vulnerability in Louisiana.",
       "Before my Ph.D., I trained as an urban and regional planner and environmental economist. I contributed to Dhaka's Detailed Area Plan (2016–2035) and later studied how farming communities adapt to climate change. That mix of planning, economics, and geospatial science shapes how I approach resilience: rigorous models that people can actually use."
     ],
     interests: [
@@ -244,8 +245,11 @@ const SITE = {
 
   // News strip near the top — newest first. Keep 4–6 items.
   news: [
+    { date: "Nov 2026", text: "Passed the doctoral general examination and defended my dissertation proposal. Now a Ph.D. candidate!" },
     { date: "Dec 2026", text: "Two abstracts accepted at the AGU Annual Meeting: multi-hazard susceptibility mapping, and climate-smart agriculture." },
     { date: "Nov 2026", text: "Co-authored paper on machine learning and remote sensing for drought modeling in Louisiana published in Science of the Total Environment.", link: "https://doi.org/10.1016/j.scitotenv.2026.182386" },
+    { date: "Oct 2026", text: "Book chapter on tropical cyclone risk in the Bay of Bengal published by Springer Nature in Tropical Cyclone Risk and Resilience." },
+    { date: "Oct 2026", text: "Presented coastal-hazard model transferability research at GSA Connects 2026 in Denver." },
     { date: "Aug 2026", text: "Started as Graduate Teaching Assistant for GEOG 4044 at LSU." },
     { date: "Aug 2026", text: "Paper published in ISPRS International Journal of Geo-Information on multi-hazard coastal susceptibility.", link: "https://doi.org/10.3390/ijgi15080346" },
     { date: "2026", text: "Received the AAG-IGIF Graduate Research Award." },
@@ -406,7 +410,7 @@ const SITE = {
       type: "presentation", year: 2026,
       authors: "Hossain, T., & Leitner, M.",
       title: "Deltaic Geomorphology Governs the Transferability of Machine-Learning Coastal Hazard Models in Louisiana",
-      venue: "Abstract · GSA Connects 2026"
+      venue: "Presented · GSA Connects 2026, Denver"
     },
     {
       type: "presentation", year: 2026,
