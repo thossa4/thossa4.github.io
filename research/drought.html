@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Drought Mapping · Tanvir Hossain</title>
+  <meta name="description" content="A 30 m ensemble machine-learning drought vulnerability map for Louisiana, built from Landsat 8 and environmental data (Science of the Total Environment, 2026).">
+  <meta property="og:title" content="High-Resolution Drought Mapping Across Louisiana">
+  <meta property="og:description" content="Landsat 8 + ensemble machine learning map drought vulnerability at 30 m: about 40% of Louisiana faces high or extreme drought.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://thossa4.github.io/research/drought.html">
+  <meta property="og:image" content="https://thossa4.github.io/assets/og-image.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://thossa4.github.io/research/drought.html">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3b3a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23e9b44c'%3ETH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="project.css">
+  <script>try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}</script>
+</head>
+<body>
+  <header class="p-nav">
+    <div class="wrap">
+      <a class="home" href="../">Tanvir Hossain</a>
+      <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+        <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="p-hero">
+      <div class="p-hero__bg" style="--hero-img:url('../assets/art/drought.jpg')" aria-hidden="true"></div>
+      <div class="wrap">
+        <a class="text-link p-back" href="../#research">← All research</a>
+        <p class="kicker">Research project · Published 2026 · Co-author</p>
+        <h1>Mapping drought across Louisiana at 30 m</h1>
+        <p class="lede">National drought maps cover large areas and miss local detail. This study combines Landsat 8 imagery, environmental data and ensemble machine learning to map drought vulnerability across all of Louisiana at field scale.</p>
+        <div class="p-meta">
+          <a class="chip chip--pub" href="https://doi.org/10.1016/j.scitotenv.2026.182386" target="_blank" rel="noopener">Read the paper ↗</a>
+          <span class="chip">Science of the Total Environment 1056, 182386</span>
+          <span class="chip">Sresto et al. · 11 authors</span>
+        </div>
+        <div class="glance">
+          <div><b>30 m</b><span>statewide drought map</span></div>
+          <div><b>0.94</b><span>test R² of the best ensemble</span></div>
+          <div><b>0.85</b><span>R² under 25 km spatial-block validation</span></div>
+          <div><b>~40%</b><span>of Louisiana in high or extreme drought exposure</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-sec">
+      <div class="wrap">
+        <p class="kicker">The problem</p>
+        <h2>Drought maps that are too coarse to act on</h2>
+        <p>Drought threatens ecosystems, farms, water supplies and communities. Louisiana felt this in 2023, when an extreme drought hit agricultural and hydrological systems across the state. The US Drought Monitor and NOAA's National Centers for Environmental Information publish weekly and monthly maps, but they aggregate large areas and lack the spatial detail that local planning needs.</p>
+      </div>
+    </section>
+
+    <section class="p-sec p-sec--alt">
+      <div class="wrap">
+        <p class="kicker">Approach</p>
+        <h2>How it was built</h2>
+        <ol class="steps">
+          <li><div><b>Satellite and environmental inputs</b><span>Landsat 8 OLI imagery combined with environmental variables at a 30 m resolution.</span></div></li>
+          <li><div><b>Ground-based training data</b><span>Training data came from ground-based monitoring and government sources, split 80% for training and 20% for testing.</span></div></li>
+          <li><div><b>Four models compared</b><span>Random Forest, Extreme Gradient Boosting (XGB), Artificial Neural Network (ANN) and Support Vector Machine were tested.</span></div></li>
+          <li><div><b>Stacking the best performers</b><span>The best models were combined in different ensembles. XGB + ANN with a linear-regression meta-learner reached the highest test R² of 0.94.</span></div></li>
+          <li><div><b>Regional cross-validation</b><span>25 km spatial blocks tested how well the model holds up across regions. The XGB + ANN ensemble still performed best (R² = 0.85, RMSE = 9.57).</span></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="p-sec">
+      <div class="wrap split">
+        <div>
+          <p class="kicker">Findings</p>
+          <h2>Where drought hits hardest</h2>
+          <p>The southwestern, south-central and southeastern parts of Louisiana show high drought intensity. About 40% of the state is exposed to high or extreme drought conditions.</p>
+          <p class="kicker" style="margin-top:26px">Most drought-exposed land cover</p>
+          <div class="bars">
+            <div><span>Woody wetlands</span><span class="track"><i style="width:100%"></i></span><b>23.2%</b></div>
+            <div><span>Evergreen forests</span><span class="track"><i style="width:87.5%"></i></span><b>20.3%</b></div>
+            <div><span>Cultivated crops</span><span class="track"><i style="width:63.8%"></i></span><b>14.8%</b></div>
+          </div>
+        </div>
+        <div>
+          <div id="pmap" role="region" aria-label="Map of Louisiana with the three regions of high drought intensity labelled"></div>
+          <p class="note">Circles mark the general regions named in the paper, not exact model output.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="p-sec p-sec--alt">
+      <div class="wrap">
+        <p class="kicker">Why it matters</p>
+        <h2>A low-cost drought monitor for local decisions</h2>
+        <p>Beyond new drought insights for Louisiana, the study delivers a high-resolution, data-driven framework that state and local agencies, agriculture and water-resource managers can use for low-cost drought monitoring and management.</p>
+        <div class="cite" style="margin-top:26px">Sresto, M. A., Meng, X., Awasthi, B., Siddika, S., Saha, S., Roy, S., Islam, A. H. M. M., <b>Hossain, T.</b>, Ishmam, Z. S., Setu, S. R., &amp; Hashar, M. N. (2026). Integrating machine learning and remote sensing for comprehensive drought modeling in Louisiana, USA. <em>Science of the Total Environment, 1056</em>, 182386. <a class="text-link" href="https://doi.org/10.1016/j.scitotenv.2026.182386" target="_blank" rel="noopener">doi.org/10.1016/j.scitotenv.2026.182386</a></div>
+        <p style="margin-top:22px">Related: <a class="text-link" href="multi-hazard.html">Multi-hazard coastal susceptibility in deltaic Louisiana →</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span>© 2026 Tanvir Hossain</span>
+      <a href="../#research" class="text-link">← Back to all research</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script>
+    (function () {
+      const root = document.documentElement;
+      const isDark = () => (root.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light")) === "dark";
+      document.getElementById("theme-toggle").addEventListener("click", () => {
+        const next = isDark() ? "light" : "dark";
+        root.dataset.theme = next;
+        try { localStorage.setItem("theme", next); } catch (e) {}
+      });
+      if (!window.L) return;
+      const tileUrl = () => `https://{s}.basemaps.cartocdn.com/${isDark() ? "dark_all" : "light_all"}/{z}/{x}/{y}{r}.png`;
+      const map = L.map("pmap", { scrollWheelZoom: false });
+      const tiles = L.tileLayer(tileUrl(), { attribution: "&copy; OpenStreetMap &copy; CARTO · Boundary: US Census TIGER", subdomains: "abcd", maxZoom: 12 }).addTo(map);
+      new MutationObserver(() => tiles.setUrl(tileUrl())).observe(root, { attributes: true, attributeFilter: ["data-theme"] });
+      const state = [[33.01,-92.72],[33.02,-94.04],[31.99,-94.04],[31.89,-93.93],[31.9,-93.9],[31.82,-93.87],[31.77,-93.82],[31.75,-93.84],[31.7,-93.79],[31.59,-93.83],[31.53,-93.79],[31.51,-93.71],[31.47,-93.75],[31.45,-93.7],[31.37,-93.67],[31.37,-93.64],[31.31,-93.69],[31.27,-93.62],[31.17,-93.59],[31.18,-93.53],[31.09,-93.56],[31.03,-93.51],[31.0,-93.58],[30.94,-93.53],[30.89,-93.57],[30.82,-93.55],[30.76,-93.61],[30.68,-93.63],[30.64,-93.68],[30.59,-93.68],[30.54,-93.74],[30.52,-93.71],[30.44,-93.7],[30.39,-93.76],[30.33,-93.77],[30.29,-93.7],[30.21,-93.72],[30.14,-93.69],[30.09,-93.73],[30.06,-93.7],[29.81,-93.93],[29.69,-93.84],[29.6,-93.81],[29.62,-93.77],[29.67,-93.77],[29.69,-93.71],[29.72,-93.43],[29.7,-93.34],[29.73,-93.22],[29.53,-92.62],[29.48,-92.29],[29.53,-92.08],[29.42,-91.91],[29.36,-91.88],[29.4,-91.78],[29.36,-91.71],[29.38,-91.64],[29.3,-91.42],[29.2,-91.29],[29.12,-90.97],[29.05,-91.02],[28.99,-90.93],[28.99,-90.75],[29.04,-90.55],[29.0,-90.34],[29.05,-90.16],[29.14,-90.03],[29.2,-89.61],[29.17,-89.52],[29.11,-89.47],[28.91,-89.49],[28.86,-89.46],[28.86,-89.4],[28.99,-89.23],[28.92,-89.17],[28.93,-89.11],[29.03,-89.01],[29.09,-89.0],[29.12,-88.92],[29.21,-88.91],[29.25,-88.94],[29.3,-89.08],[29.43,-89.14],[29.49,-89.04],[29.71,-88.82],[29.84,-88.77],[29.98,-88.77],[30.14,-88.86],[30.17,-89.1],[30.21,-89.18],[30.16,-89.51],[30.22,-89.61],[30.45,-89.68],[30.55,-89.8],[30.64,-89.81],[30.66,-89.85],[30.74,-89.82],[30.77,-89.83],[30.82,-89.78],[31.0,-89.73],[31.0,-91.64],[31.05,-91.56],[31.12,-91.63],[31.19,-91.59],[31.26,-91.65],[31.28,-91.52],[31.32,-91.51],[31.41,-91.58],[31.43,-91.54],[31.38,-91.52],[31.37,-91.47],[31.52,-91.52],[31.58,-91.41],[31.59,-91.49],[31.63,-91.52],[31.62,-91.4],[31.75,-91.37],[31.75,-91.26],[31.76,-91.37],[31.84,-91.34],[31.86,-91.29],[31.82,-91.28],[31.81,-91.25],[31.86,-91.27],[31.92,-91.18],[31.97,-91.19],[32.02,-91.08],[32.07,-91.16],[32.05,-91.08],[32.15,-91.0],[32.18,-91.06],[32.12,-91.05],[32.13,-91.16],[32.2,-91.16],[32.24,-91.04],[32.19,-91.0],[32.29,-90.98],[32.3,-90.92],[32.37,-90.88],[32.34,-90.91],[32.35,-90.99],[32.44,-90.97],[32.44,-91.05],[32.48,-91.12],[32.55,-91.09],[32.49,-91.04],[32.5,-90.99],[32.56,-91.08],[32.6,-91.01],[32.64,-91.02],[32.59,-91.12],[32.62,-91.15],[32.72,-91.06],[32.75,-91.17],[32.84,-91.14],[32.9,-91.06],[32.98,-91.09],[32.98,-91.14],[32.92,-91.13],[32.9,-91.17],[32.93,-91.21],[33.0,-91.17],[33.01,-92.72]];
+      const poly = L.polygon(state, { color: "#a5681f", weight: 2, fillColor: "#a87d33", fillOpacity: .15 }).addTo(map);
+      map.fitBounds(poly.getBounds(), { padding: [16, 16] });
+      [["Southwest", 30.25, -92.9], ["South-central", 30.0, -91.75], ["Southeast", 29.95, -90.35]].forEach(([n, la, lo]) =>
+        L.circleMarker([la, lo], { radius: 22, color: "#8a5a3c", weight: 1.5, fillColor: "#a5681f", fillOpacity: .28 }).addTo(map)
+          .bindTooltip(n + ": high drought intensity", { direction: "top" }));
+    })();
+  </script>
+  <script data-goatcounter="https://tanvirhossain.goatcounter.com/count" async src="https://gc.zgo.at/count.js"></script>
+</body>
+</html>

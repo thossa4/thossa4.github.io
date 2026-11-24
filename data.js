@@ -177,6 +177,22 @@ const SITE = {
       image: "assets/art/hazard.jpg"
     },
     {
+      title: "High-Resolution Drought Mapping Across Louisiana",
+      methods: [
+        "Landsat 8 OLI and environmental variables at 30 m",
+        "RF, XGB, ANN and SVM compared; XGB + ANN stacking best (R² = 0.94)",
+        "25 km spatial-block cross-validation (R² = 0.85)"
+      ],
+      status: "Published",
+      tags: ["Ensemble ML", "Landsat 8", "Drought"],
+      summary: "Co-authored statewide drought vulnerability map: about 40% of Louisiana faces high or extreme drought, led by woody wetlands, evergreen forests and cropland.",
+      page: "research/drought.html",
+      link: "https://doi.org/10.1016/j.scitotenv.2026.182386",
+      linkLabel: "Read the paper",
+      tone: "sand",
+      image: "assets/art/drought.jpg"
+    },
+    {
       title: "Coastal Vulnerability in Terrebonne Parish",
       methods: [
         "Sentinel-1 radar change detection",
