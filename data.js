@@ -35,7 +35,7 @@ const SITE = {
     linkedin: "https://www.linkedin.com/in/tanvir-hossain-315aa912a/",
     github: "",   // optional
     orcid: "",    // optional
-    cv: "" // add a CV without your phone number, e.g. "assets/Tanvir_Hossain_CV.pdf"
+    cv: "assets/Tanvir_Hossain_CV.pdf"
   },
 
   education: [
