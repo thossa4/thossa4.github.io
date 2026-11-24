@@ -167,6 +167,7 @@
         <h3>${esc(h.title)}</h3>
         <p>${esc(h.summary)}</p>
         ${(h.methods || []).length ? `<ul class="rcard__methods">${h.methods.map((m) => `<li>${esc(m)}</li>`).join("")}</ul>` : ""}
+        ${h.page ? `<a class="text-link" href="${esc(h.page)}">Explore the project →</a>` : ""}
         ${h.link ? `<a class="text-link" href="${esc(h.link)}" target="_blank" rel="noopener">${esc(h.linkLabel || "Learn more")} ↗</a>` : ""}
       </div>
     </article>`).join("");

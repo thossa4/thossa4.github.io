@@ -465,3 +465,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .gitem figcaption { padding: 44px 16px 14px; background: linear-gradient(to top, rgba(12,36,35,.78), rgba(12,36,35,.35) 60%, transparent); font-size: 13.5px; }
 .lightbox img { border-radius: 14px; box-shadow: 0 30px 80px -20px rgba(0,0,0,.6); }
 @media (prefers-reduced-motion: reduce) { .rcard, .gitem, .rcard:hover, .gitem:hover { transform: none; transition: none; } }
+
+/* Two links on one card: keep the second tight under the first */
+.rcard__body > .text-link + .text-link { margin-top: 6px; padding-top: 0; }

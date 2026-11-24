@@ -170,6 +170,7 @@ const SITE = {
       status: "Published",
       tags: ["Machine Learning", "Deep Learning", "GIS"],
       summary: "Machine-learning and deep-learning models that map where multiple coastal hazards overlap across Louisiana's delta.",
+      page: "research/multi-hazard.html",
       link: "https://doi.org/10.3390/ijgi15080346",
       linkLabel: "Read the paper",
       tone: "sea",
