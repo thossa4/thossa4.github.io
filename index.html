@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tanvir Hossain · Geography & GeoAI</title>
+  <meta name="description" content="Tanvir Hossain, Ph.D. student in Geography at Louisiana State University. GIS, remote sensing, GeoAI, natural hazards, and coastal resilience.">
+  <meta property="og:title" content="Tanvir Hossain · Geography & GeoAI">
+  <meta property="og:description" content="GIS, remote sensing, and machine learning for natural hazards and coastal resilience.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3b3a'/%3E%3Ctext x='32' y='42' font-family='Georgia,serif' font-size='28' text-anchor='middle' fill='%23e9b44c'%3ETH%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <script>
+    // Apply saved theme before paint to avoid a flash
+    try { const t = localStorage.getItem("theme"); if (t) document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#top" class="nav__logo" aria-label="Back to top"><span id="logo-initials">TH</span></a>
+      <nav class="nav__links" id="nav-links" aria-label="Sections">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#places">Places</a>
+        <a href="#education">Education</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <div class="nav__actions">
+        <button class="icon-btn" id="theme-toggle" aria-label="Toggle dark mode">
+          <svg class="i-sun" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><circle cx="12" cy="12" r="4.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+          <svg class="i-moon" viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+        </button>
+        <button class="icon-btn nav__burger" id="nav-burger" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <svg viewBox="0 0 24 24" width="20" height="20" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top">
+      <div class="hero__art" id="hero-art" aria-hidden="true"></div>
+      <svg class="hero__contours" id="contours" aria-hidden="true" preserveAspectRatio="xMidYMid slice"></svg>
+      <div class="hero__inner wrap">
+        <div class="hero__text">
+          <p class="eyebrow mono"><span class="dot"></span><span>30.4133° N · 91.1800° W</span></p>
+          <h1 id="hero-name">Tanvir Hossain</h1>
+          <p class="hero__title" id="hero-title"></p>
+          <p class="hero__aff" id="hero-aff"></p>
+          <p class="hero__lede">Mapping natural-hazard risk with GIS, remote sensing, and machine learning, so coastal communities can plan for what's coming.</p>
+          <div class="hero__cta" id="hero-cta"></div>
+        </div>
+        <figure class="hero__photo" id="hero-photo"></figure>
+      </div>
+    </section>
+
+    <!-- NEWS + STATS -->
+    <section class="pulse" aria-label="Latest news and numbers">
+      <div class="wrap">
+        <div class="news">
+          <span class="news__label mono"><span class="dot dot--live"></span>Latest</span>
+          <div class="news__viewport"><ul class="news__track" id="news"></ul></div>
+        </div>
+        <div class="stats" id="stats"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="about">
+      <div class="wrap grid-2">
+        <div>
+          <h2 class="section__title"><span class="mono num">01</span>About</h2>
+          <div class="prose" id="about-bio"></div>
+        </div>
+        <aside class="card interests">
+          <h3 class="mono small-cap">Research interests</h3>
+          <ul class="interest-list" id="interests"></ul>
+          <h3 class="mono small-cap mt-sm">Honors & awards</h3>
+          <ul class="awards" id="awards"></ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RESEARCH HIGHLIGHTS -->
+    <section class="section section--alt" id="research">
+      <div class="wrap">
+        <h2 class="section__title"><span class="mono num">02</span>Research highlights</h2>
+        <div class="cards" id="highlights"></div>
+      </div>
+    </section>
+
+    <!-- PUBLICATIONS -->
+    <section class="section" id="publications">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title"><span class="mono num">03</span>Publications & presentations</h2>
+          <a class="text-link" id="scholar-link" target="_blank" rel="noopener">Google Scholar ↗</a>
+        </div>
+        <div class="tabs" role="tablist" aria-label="Filter publications" id="pub-tabs"></div>
+        <ol class="pubs" id="pubs"></ol>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section section--alt" id="experience">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title"><span class="mono num">04</span>Experience</h2>
+          <div class="tabs tabs--small" role="tablist" aria-label="Filter experience" id="exp-tabs"></div>
+        </div>
+        <ol class="timeline" id="timeline"></ol>
+      </div>
+    </section>
+
+    <!-- MAP -->
+    <section class="section" id="places">
+      <div class="wrap">
+        <div class="section__head">
+          <h2 class="section__title"><span class="mono num">05</span>Places</h2>
+          <ul class="legend" id="map-legend"></ul>
+        </div>
+        <div class="map-wrap">
+          <div id="map" class="map" role="region" aria-label="Map of places Tanvir has studied, worked, done fieldwork and presented"></div>
+          <ol class="place-list" id="place-list"></ol>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section class="section" id="education">
+      <div class="wrap">
+        <h2 class="section__title"><span class="mono num">06</span>Education</h2>
+        <div class="edu" id="edu"></div>
+      </div>
+    </section>
+
+    <!-- SKILLS + MEMBERSHIPS -->
+    <section class="section section--alt" id="skills">
+      <div class="wrap">
+        <h2 class="section__title"><span class="mono num">07</span>Skills & affiliations</h2>
+        <div class="skills" id="skill-groups"></div>
+        <div class="grid-2 grid-2--even mt">
+          <div class="card">
+            <h3 class="mono small-cap">Professional memberships</h3>
+            <ul class="kv" id="memberships"></ul>
+          </div>
+          <div class="card">
+            <h3 class="mono small-cap">Training & workshops</h3>
+            <ul class="kv" id="training"></ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section contact" id="contact">
+      <div class="wrap contact__inner">
+        <p class="eyebrow mono">Get in touch</p>
+        <h2 class="contact__title">Let's work together.</h2>
+        <p class="contact__text">Open to research collaborations, GIS and hazard-modeling projects, and conversations about coastal resilience.</p>
+        <a class="contact__email" id="contact-email"></a>
+        <div class="contact__links" id="contact-links"></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer__inner">
+      <span id="footer-copy"></span>
+      <a href="#top" class="text-link">Back to top ↑</a>
+    </div>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
+  <script src="data.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>
