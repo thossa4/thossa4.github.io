@@ -212,6 +212,7 @@ const SITE = {
 
   // News strip near the top — newest first. Keep 4–6 items.
   news: [
+    { date: "Nov 2026", text: "Co-authored paper on machine learning and remote sensing for drought modeling in Louisiana published in Science of the Total Environment." },
     { date: "Dec 2026", text: "Two abstracts accepted at the AGU Annual Meeting: multi-hazard susceptibility mapping, and climate-smart agriculture." },
     { date: "Aug 2026", text: "Started as Graduate Teaching Assistant for GEOG 4044 at LSU." },
     { date: "Aug 2026", text: "Paper published in ISPRS International Journal of Geo-Information on multi-hazard coastal susceptibility.", link: "https://doi.org/10.3390/ijgi15080346" },
@@ -240,6 +241,18 @@ const SITE = {
       title: "Multi-Hazard Coastal Susceptibility Mapping Using Machine Learning and Deep Learning in Deltaic Louisiana",
       venue: "ISPRS International Journal of Geo-Information, 15(8), 346",
       link: "https://doi.org/10.3390/ijgi15080346"
+    },
+    {
+      type: "journal", year: 2026,
+      authors: "Sresto, M. N. H. M. A., Meng, X., Awasthi, B., Siddika, S., Saha, S., Roy, S., Islam, A. H. M. M., Hossain, T., Ishmam, Z. S., & Setu, S. R.",
+      title: "Integrating machine learning and remote sensing for comprehensive drought modeling in Louisiana, USA",
+      venue: "Science of the Total Environment, 1056, 182386"
+    },
+    {
+      type: "chapter", year: 2027,
+      authors: "Hossain, T., Mostafiz, R. B., Rohli, R. V., & Bushra, N.",
+      title: "Drought Risk Mitigation",
+      venue: "In The Routledge Handbook of Disaster Mitigation and Preparedness (pp. 145–157). Routledge"
     },
     {
       type: "chapter", year: 2026,
@@ -277,12 +290,6 @@ const SITE = {
       authors: "Mostafiz, R. B., & Hossain, T.",
       title: "Environmental Conservation and Economic Incentives",
       venue: "Springer (submitted)"
-    },
-    {
-      type: "review", year: null,
-      authors: "Hossain, T., Mostafiz, R. B., Rohli, R. V., & Bushra, N.",
-      title: "Drought Mitigation",
-      venue: "Book chapter submitted to Springer Nature"
     },
     {
       type: "review", year: 2026,
