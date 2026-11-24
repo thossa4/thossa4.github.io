@@ -390,7 +390,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .legend li { display: inline-flex; align-items: center; gap: 6px; }
 .legend i, .place-list i { width: 10px; height: 10px; border-radius: 50%; display: inline-block; flex: none; }
 .k-study { background: var(--sea); } .k-work { background: var(--marsh); }
-.k-field { background: var(--accent); } .k-talk { background: var(--earth); }
+.k-field { background: var(--accent); } .k-talk { background: #b4465e; }
 .map-wrap { display: grid; grid-template-columns: 1fr 320px; gap: 18px; }
 .map { position: relative; height: 460px; border-radius: var(--radius); border: 1px solid var(--line); overflow: hidden; background: var(--bg-alt); z-index: 0; isolation: isolate; }
 .place-list { max-height: 460px; overflow-y: auto; display: flex; flex-direction: column; gap: 8px; }

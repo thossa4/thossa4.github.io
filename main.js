@@ -241,7 +241,8 @@
       maxZoom: 16,
       attribution: 'Tiles &copy; <a href="https://www.esri.com">Esri</a> &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors'
     }).addTo(map);
-    const color = (k) => getComputedStyle(document.documentElement).getPropertyValue({ study: "--sea", work: "--marsh", field: "--accent", talk: "--earth" }[k] || "--brand").trim();
+    const color = (k) => k === "talk" ? "#b4465e"
+      : getComputedStyle(document.documentElement).getPropertyValue({ study: "--sea", work: "--marsh", field: "--accent" }[k] || "--brand").trim();
     const markers = places.map((p) => Leaf.marker([p.lat, p.lng], {
       icon: Leaf.divIcon({ className: "", html: `<div class="pin" style="background:${color(p.kind)}"></div>`, iconSize: [16, 16], iconAnchor: [8, 8], popupAnchor: [0, -8] }),
       title: p.name
