@@ -197,19 +197,22 @@ const SITE = {
       status: "Under review",
       tags: ["Landsat LST", "Environmental Justice", "Earth Engine"],
       summary: "Urban heat islands across 424 census tracts in New Orleans, Baton Rouge, Shreveport and Lafayette, plus an audit that caught hidden Landsat data-quality failures before they skewed the results.",
-      tone: "earth"
+      tone: "earth",
+      image: "assets/art/heat.jpg"
     },
     {
       title: "Deep Learning for Hurricane Crop Damage",
       status: "Ongoing",
       tags: ["Sentinel", "Deep Learning", "Dissertation"],
       summary: "Eight years of multi-temporal imagery used to track crop health and hurricane damage across coastal Louisiana farmland, building on the multi-hazard susceptibility maps.",
-      tone: "sea"
+      tone: "sea",
+      image: "assets/art/cropdamage.jpg"
     }
   ],
 
   // News strip near the top — newest first. Keep 4–6 items.
   news: [
+    { date: "Dec 2026", text: "Two abstracts accepted at the AGU Annual Meeting: multi-hazard susceptibility mapping, and climate-smart agriculture." },
     { date: "Aug 2026", text: "Started as Graduate Teaching Assistant for GEOG 4044 at LSU." },
     { date: "Aug 2026", text: "Paper published in ISPRS International Journal of Geo-Information on multi-hazard coastal susceptibility.", link: "https://doi.org/10.3390/ijgi15080346" },
     { date: "2026", text: "Received the AAG-IGIF Graduate Research Award." },
@@ -288,10 +291,10 @@ const SITE = {
       venue: "Discover Cities (revised after peer review)"
     },
     {
-      type: "review", year: 2026,
+      type: "prep", year: 2026,
       authors: "Hossain, T., Zhou, C., Conger, S., & Rohli, R. V.",
       title: "Estimating Daily Reference Evapotranspiration in Louisiana's Humid Subtropical Climate Using Machine Learning Approaches Under Limited Data Availability",
-      venue: "Submitted to Transactions of the ASABE"
+      venue: "Manuscript in preparation"
     },
     {
       type: "review", year: 2026,
@@ -312,10 +315,10 @@ const SITE = {
       venue: "Book chapter (submitted)"
     },
     {
-      type: "review", year: 2025,
+      type: "prep", year: 2026,
       authors: "Hossain, T., Serinio, M. N., Adusumilli, N., Llones, C., Capuno, C., & Manalo, U.-N.",
       title: "Impact of Agricultural Training on Technical Efficiency of Rice Farmers in the Philippines: A Stochastic Frontier Analysis",
-      venue: "Submitted to Science of The Total Environment"
+      venue: "Manuscript in preparation"
     },
     {
       type: "prep", year: 2026,
@@ -351,13 +354,13 @@ const SITE = {
       type: "presentation", year: 2026,
       authors: "Hossain, T., & Leitner, M.",
       title: "Multi-Hazard Susceptibility Mapping in Deltaic Louisiana: How Spatial Validation Design Governs Apparent Model Transferability",
-      venue: "Abstract · AGU Annual Meeting · December 2026"
+      venue: "Accepted · AGU Annual Meeting · December 2026"
     },
     {
       type: "presentation", year: 2026,
       authors: "Hossain, T., & Mostafiz, R. B.",
       title: "From Risk to Resilience: A Two-Part Systematic Synthesis of Climate Change Impacts on Global Agriculture and Evidence-Based Climate-Smart Adaptation",
-      venue: "Abstract · AGU Annual Meeting · December 2026"
+      venue: "Accepted · AGU Annual Meeting · December 2026"
     },
     {
       type: "presentation", year: 2026,
