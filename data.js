@@ -213,7 +213,7 @@ const SITE = {
   // News strip near the top — newest first. Keep 4–6 items.
   news: [
     { date: "Dec 2026", text: "Two abstracts accepted at the AGU Annual Meeting: multi-hazard susceptibility mapping, and climate-smart agriculture." },
-    { date: "Nov 2026", text: "Co-authored paper on machine learning and remote sensing for drought modeling in Louisiana published in Science of the Total Environment." },
+    { date: "Nov 2026", text: "Co-authored paper on machine learning and remote sensing for drought modeling in Louisiana published in Science of the Total Environment.", link: "https://doi.org/10.1016/j.scitotenv.2026.182386" },
     { date: "Aug 2026", text: "Started as Graduate Teaching Assistant for GEOG 4044 at LSU." },
     { date: "Aug 2026", text: "Paper published in ISPRS International Journal of Geo-Information on multi-hazard coastal susceptibility.", link: "https://doi.org/10.3390/ijgi15080346" },
     { date: "2026", text: "Received the AAG-IGIF Graduate Research Award." },
@@ -246,7 +246,8 @@ const SITE = {
       type: "journal", year: 2026,
       authors: "Sresto, M. N. H. M. A., Meng, X., Awasthi, B., Siddika, S., Saha, S., Roy, S., Islam, A. H. M. M., Hossain, T., Ishmam, Z. S., & Setu, S. R.",
       title: "Integrating machine learning and remote sensing for comprehensive drought modeling in Louisiana, USA",
-      venue: "Science of the Total Environment, 1056, 182386"
+      venue: "Science of the Total Environment, 1056, 182386",
+      link: "https://doi.org/10.1016/j.scitotenv.2026.182386"
     },
     {
       type: "chapter", year: 2027,
