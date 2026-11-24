@@ -212,8 +212,8 @@ const SITE = {
 
   // News strip near the top — newest first. Keep 4–6 items.
   news: [
-    { date: "Nov 2026", text: "Co-authored paper on machine learning and remote sensing for drought modeling in Louisiana published in Science of the Total Environment." },
     { date: "Dec 2026", text: "Two abstracts accepted at the AGU Annual Meeting: multi-hazard susceptibility mapping, and climate-smart agriculture." },
+    { date: "Nov 2026", text: "Co-authored paper on machine learning and remote sensing for drought modeling in Louisiana published in Science of the Total Environment." },
     { date: "Aug 2026", text: "Started as Graduate Teaching Assistant for GEOG 4044 at LSU." },
     { date: "Aug 2026", text: "Paper published in ISPRS International Journal of Geo-Information on multi-hazard coastal susceptibility.", link: "https://doi.org/10.3390/ijgi15080346" },
     { date: "2026", text: "Received the AAG-IGIF Graduate Research Award." },
