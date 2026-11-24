@@ -247,6 +247,7 @@ const SITE = {
   gallery: [
     { src: "assets/photos/gsa-2026-1.jpg", event: "GSA Connects 2026 · Denver", caption: "Presenting my dissertation research on coastal hazard susceptibility", size: "wide" },
     { src: "assets/photos/gsa-2026-2.jpg", event: "GSA Connects 2026 · Denver", caption: "Why accurate ML hazard models can still struggle to transfer to new places" },
+    { src: "assets/photos/aag-2026-igif-award.jpg", event: "AAG 2026 · San Francisco", caption: "AAG International Geographic Information Funds (IGIF) Graduate Research Award", size: "wide" },
     { src: "assets/photos/aag-2026-badge.jpg", event: "AAG 2026 · San Francisco", caption: "Paper presenter and AAG award recipient", size: "tall" },
     { src: "assets/photos/aag-2026-1.jpg", event: "AAG 2026 · San Francisco", caption: "Oral presentation on machine learning for coastal hazards" },
     { src: "assets/photos/aag-2026-2.jpg", event: "AAG 2026 · San Francisco", caption: "Multi-hazard coastal susceptibility mapping in deltaic Louisiana" },
@@ -263,7 +264,7 @@ const SITE = {
     { date: "Oct 2026", text: "Presented coastal-hazard model transferability research at GSA Connects 2026 in Denver." },
     { date: "Aug 2026", text: "Started as Graduate Teaching Assistant for GEOG 4044 at LSU." },
     { date: "Aug 2026", text: "Paper published in ISPRS International Journal of Geo-Information on multi-hazard coastal susceptibility.", link: "https://doi.org/10.3390/ijgi15080346" },
-    { date: "2026", text: "Received the AAG-IGIF Graduate Research Award." },
+    { date: "Mar 2026", text: "Received the AAG International Geographic Information Funds (IGIF) Graduate Research Award at the AAG Annual Meeting, San Francisco." },
     { date: "Mar 2026", text: "Oral presentation at the AAG Annual Meeting, San Francisco." },
     { date: "Dec 2025", text: "Oral talk and poster at AGU Fall Meeting, New Orleans." }
   ],
@@ -459,7 +460,7 @@ const SITE = {
   highlightAuthor: "Hossain, T.",
 
   awards: [
-    { name: "AAG-IGIF Graduate Research Award", org: "American Association of Geographers", date: "2026" },
+    { name: "AAG International Geographic Information Funds (IGIF) Graduate Research Award", org: "American Association of Geographers", date: "March 2026" },
     { name: "Graduate Student Association Travel Award", org: "Louisiana State University", date: "FY 2025–2026" }
   ],
 
