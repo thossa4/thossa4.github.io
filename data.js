@@ -34,7 +34,7 @@ const SITE = {
     email: "thossa4@lsu.edu",
     scholar: "https://scholar.google.com/citations?user=lsUA2k0AAAAJ&hl=en",
     linkedin: "https://www.linkedin.com/in/tanvir-hossain-315aa912a/",
-    github: "",   // optional
+    github: "https://github.com/thossa4",
     orcid: "",    // optional
     cv: "assets/Tanvir_Hossain_CV.pdf"
   },
