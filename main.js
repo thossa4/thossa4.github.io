@@ -171,6 +171,29 @@
       </div>
     </article>`).join("");
 
+  // ---------- Gallery + lightbox ----------
+  const gal = S.gallery || [];
+  const gsec = $("gallery");
+  if (!gal.length) { if (gsec) gsec.remove(); document.querySelector('a[href="#gallery"]')?.remove(); }
+  else {
+    $("gallery-grid").innerHTML = gal.map((g, i) => `
+      <figure class="gitem ${g.size ? "gitem--" + esc(g.size) : ""} reveal">
+        <button type="button" data-i="${i}" aria-label="View photo: ${esc(g.caption)}">
+          <img src="${esc(g.src)}" alt="${esc(g.caption)}" loading="lazy">
+        </button>
+        <figcaption><span class="mono">${esc(g.event)}</span>${esc(g.caption)}</figcaption>
+      </figure>`).join("");
+    const lb = $("lightbox"), lbImg = $("lightbox-img"), lbCap = $("lightbox-cap");
+    const openLb = (i) => {
+      const g = gal[i]; lbImg.src = g.src; lbImg.alt = g.caption;
+      lbCap.innerHTML = `<span class="mono">${esc(g.event)}</span>${esc(g.caption)}`;
+      if (lb.showModal) lb.showModal(); else window.open(g.src, "_blank");
+    };
+    $("gallery-grid").addEventListener("click", (e) => { const b = e.target.closest("button[data-i]"); if (b) openLb(+b.dataset.i); });
+    $("lightbox-close").addEventListener("click", () => lb.close());
+    lb.addEventListener("click", (e) => { if (e.target === lb) lb.close(); });
+  }
+
   // ---------- Publications ----------
   const PUB_TYPES = [
     ["all", "All"],

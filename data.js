@@ -243,6 +243,17 @@ const SITE = {
     }
   ],
 
+  // Photo gallery ("On the road") — newest first. size: "tall" | "wide" | "" (normal)
+  gallery: [
+    { src: "assets/photos/gsa-2026-1.jpg", event: "GSA Connects 2026 · Denver", caption: "Presenting my dissertation research on coastal hazard susceptibility", size: "wide" },
+    { src: "assets/photos/gsa-2026-2.jpg", event: "GSA Connects 2026 · Denver", caption: "Why accurate ML hazard models can still struggle to transfer to new places" },
+    { src: "assets/photos/aag-2026-badge.jpg", event: "AAG 2026 · San Francisco", caption: "Paper presenter and AAG award recipient", size: "tall" },
+    { src: "assets/photos/aag-2026-1.jpg", event: "AAG 2026 · San Francisco", caption: "Oral presentation on machine learning for coastal hazards" },
+    { src: "assets/photos/aag-2026-2.jpg", event: "AAG 2026 · San Francisco", caption: "Multi-hazard coastal susceptibility mapping in deltaic Louisiana" },
+    { src: "assets/photos/agu-2025-poster.jpg", event: "AGU25 · New Orleans", caption: "Poster: natural hazards and the fragility of Louisiana's agricultural systems", size: "tall" },
+    { src: "assets/photos/agu-2025-talk.jpg", event: "AGU25 · New Orleans", caption: "Oral talk: machine-learning reference evapotranspiration for irrigation resilience", size: "wide" }
+  ],
+
   // News strip near the top — newest first. Keep 4–6 items.
   news: [
     { date: "Nov 2026", text: "Passed the doctoral general examination and defended my dissertation proposal. Now a Ph.D. candidate!" },

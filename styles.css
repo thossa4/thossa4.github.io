@@ -228,6 +228,24 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .rcard__methods li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 2px; background: var(--tone, var(--accent)); }
 .rcard__body > .text-link { margin-top: 10px; }
 .hero__open { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 7px 14px; border-radius: 999px; font-size: 13.5px; color: var(--ink); background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); backdrop-filter: blur(4px); }
+.section__sub { color: var(--ink-soft); font-size: 15px; margin: 0; }
+.gallery { display: grid; grid-template-columns: repeat(4, 1fr); grid-auto-rows: 210px; grid-auto-flow: dense; gap: 14px; }
+.gitem { position: relative; margin: 0; border-radius: var(--radius); overflow: hidden; background: var(--bg-alt); box-shadow: var(--shadow); }
+.gitem--tall { grid-row: span 2; }
+.gitem--wide { grid-column: span 2; }
+.gitem button { all: unset; display: block; width: 100%; height: 100%; cursor: zoom-in; }
+.gitem button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+.gitem img { width: 100%; height: 100%; object-fit: cover; display: block; transition: transform .6s ease; }
+.gitem:hover img { transform: scale(1.04); }
+.gitem figcaption { position: absolute; left: 0; right: 0; bottom: 0; padding: 34px 14px 12px; font-size: 13px; line-height: 1.4; color: #f7f4ec; background: linear-gradient(transparent, rgba(8,28,27,.88)); pointer-events: none; }
+.gitem figcaption .mono, .lightbox__cap .mono { display: block; font-size: 10.5px; letter-spacing: .06em; text-transform: uppercase; color: #e9b44c; margin-bottom: 3px; }
+@media (max-width: 860px) { .gallery { grid-template-columns: repeat(2, 1fr); grid-auto-rows: 180px; } }
+@media (max-width: 480px) { .gallery { grid-template-columns: 1fr; grid-auto-rows: 230px; } .gitem--wide { grid-column: auto; } .gitem--tall { grid-row: span 2; } }
+.lightbox { border: 0; padding: 0; background: transparent; max-width: min(92vw, 1200px); max-height: 92vh; overflow: visible; }
+.lightbox::backdrop { background: rgba(5,18,17,.88); }
+.lightbox img { display: block; max-width: min(92vw, 1200px); max-height: 80vh; border-radius: 10px; margin: 0 auto; }
+.lightbox__cap { color: #f7f4ec; text-align: center; margin: 12px 0 0; font-size: 14px; }
+.lightbox__close { position: absolute; top: -14px; right: -14px; width: 38px; height: 38px; border-radius: 50%; border: 0; background: #f7f4ec; color: #0f3b3a; font-size: 24px; line-height: 1; cursor: pointer; }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .tags span { font: 500 11.5px/1 var(--mono); padding: 5px 8px; border-radius: 6px; background: var(--bg-alt); color: var(--ink-soft); }
 .tone-sea { --tone: var(--sea); } .tone-marsh { --tone: var(--marsh); }
