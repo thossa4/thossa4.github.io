@@ -160,6 +160,12 @@ const SITE = {
   highlights: [
     {
       title: "Multi-Hazard Coastal Susceptibility in Deltaic Louisiana",
+      methods: [
+        "Flood, subsidence, storm surge and salinity mapped from one 30 m predictor stack",
+        "8 ML and deep-learning algorithms benchmarked against an ensemble meta-learner",
+        "Spatial validation up to a 5 km buffered contiguous-zone design",
+        "Salinity labels from kriged monitoring stations (R² = 0.82)"
+      ],
       status: "Published",
       tags: ["Machine Learning", "Deep Learning", "GIS"],
       summary: "Machine-learning and deep-learning models that map where multiple coastal hazards overlap across Louisiana's delta.",
@@ -170,6 +176,11 @@ const SITE = {
     },
     {
       title: "Coastal Vulnerability in Terrebonne Parish",
+      methods: [
+        "Sentinel-1 radar change detection",
+        "NDWI water-change mapping",
+        "Hot spot analysis with census-tract statistics"
+      ],
       status: "Completed",
       tags: ["Sentinel-1", "NDWI", "Hot Spot Analysis"],
       summary: "Radar change detection and water-index change combined with tract-level statistics to support resilience planning in Pointe-aux-Chênes and Montegut.",
@@ -178,6 +189,11 @@ const SITE = {
     },
     {
       title: "ML-Enhanced Evapotranspiration for Irrigation Resilience",
+      methods: [
+        "Machine-learning models for reference evapotranspiration",
+        "Built for irrigation scheduling in a humid climate",
+        "Presented at AGU 2024 and 2025"
+      ],
       status: "Ongoing",
       tags: ["Machine Learning", "Hydrology", "Irrigation"],
       summary: "Improving reference evapotranspiration estimates for irrigation scheduling in humid Louisiana. Presented at AGU 2024 and 2025.",
@@ -186,6 +202,11 @@ const SITE = {
     },
     {
       title: "Climate Adaptation in Mountain Communities of Nepal",
+      methods: [
+        "Household survey of farm families",
+        "Multivariate probit model of adaptation choices",
+        "Count models of how many strategies households adopt"
+      ],
       status: "Completed",
       tags: ["Econometrics", "Household Survey", "Adaptation"],
       summary: "M.S. thesis on how farm households build adaptive capacity and choose climate strategies, using multivariate probit and count models.",
@@ -194,6 +215,12 @@ const SITE = {
     },
     {
       title: "Thermal Inequity in Louisiana Cities",
+      methods: [
+        "Landsat land-surface temperature in Google Earth Engine",
+        "424 census tracts across four cities",
+        "Environmental-justice analysis of heat exposure",
+        "Audit of Landsat data-quality failures"
+      ],
       status: "Under review",
       tags: ["Landsat LST", "Environmental Justice", "Earth Engine"],
       summary: "Urban heat islands across 424 census tracts in New Orleans, Baton Rouge, Shreveport and Lafayette, plus an audit that caught hidden Landsat data-quality failures before they skewed the results.",
@@ -202,6 +229,11 @@ const SITE = {
     },
     {
       title: "Deep Learning for Hurricane Crop Damage",
+      methods: [
+        "Eight years of multi-temporal satellite imagery",
+        "Deep-learning models of crop health and hurricane damage",
+        "Builds on the multi-hazard susceptibility maps"
+      ],
       status: "Ongoing",
       tags: ["Sentinel", "Deep Learning", "Dissertation"],
       summary: "Eight years of multi-temporal imagery used to track crop health and hurricane damage across coastal Louisiana farmland, building on the multi-hazard susceptibility maps.",

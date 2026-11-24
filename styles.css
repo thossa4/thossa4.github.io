@@ -223,6 +223,11 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .rcard h3 { font-size: 21px; margin-bottom: 10px; }
 .rcard p { color: var(--ink-soft); font-size: 15px; flex: 1; }
 .rcard .text-link { align-self: flex-start; font-size: 14px; }
+.rcard__methods { list-style: none; margin: 14px 0 6px; padding: 12px 0 0; border-top: 1px dashed var(--line, rgba(0,0,0,.12)); display: grid; gap: 6px; }
+.rcard__methods li { position: relative; padding-left: 16px; font-size: 13.5px; line-height: 1.45; color: var(--ink-soft); }
+.rcard__methods li::before { content: ""; position: absolute; left: 0; top: .55em; width: 6px; height: 6px; border-radius: 2px; background: var(--tone, var(--accent)); }
+.rcard__body > .text-link { margin-top: 10px; }
+.hero__open { display: inline-flex; align-items: center; gap: 10px; margin-top: 18px; padding: 7px 14px; border-radius: 999px; font-size: 13.5px; color: var(--ink); background: rgba(255,255,255,.07); border: 1px solid rgba(255,255,255,.16); backdrop-filter: blur(4px); }
 .tags { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 14px; }
 .tags span { font: 500 11.5px/1 var(--mono); padding: 5px 8px; border-radius: 6px; background: var(--bg-alt); color: var(--ink-soft); }
 .tone-sea { --tone: var(--sea); } .tone-marsh { --tone: var(--marsh); }
