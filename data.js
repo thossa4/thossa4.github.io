@@ -245,14 +245,14 @@ const SITE = {
 
   // Photo gallery ("On the road") — newest first. size: "tall" | "wide" | "" (normal)
   gallery: [
-    { src: "assets/photos/gsa-2026-1.jpg", event: "GSA Connects 2026 · Denver", caption: "Presenting my dissertation research on coastal hazard susceptibility", size: "wide" },
-    { src: "assets/photos/gsa-2026-2.jpg", event: "GSA Connects 2026 · Denver", caption: "Why accurate ML hazard models can still struggle to transfer to new places" },
-    { src: "assets/photos/aag-2026-igif-award.jpg", event: "AAG 2026 · San Francisco", caption: "AAG International Geographic Information Funds (IGIF) Graduate Research Award", size: "wide" },
-    { src: "assets/photos/aag-2026-badge.jpg", event: "AAG 2026 · San Francisco", caption: "Paper presenter and AAG award recipient", size: "tall" },
-    { src: "assets/photos/aag-2026-1.jpg", event: "AAG 2026 · San Francisco", caption: "Oral presentation on machine learning for coastal hazards" },
-    { src: "assets/photos/aag-2026-2.jpg", event: "AAG 2026 · San Francisco", caption: "Multi-hazard coastal susceptibility mapping in deltaic Louisiana" },
-    { src: "assets/photos/agu-2025-poster.jpg", event: "AGU25 · New Orleans", caption: "Poster: natural hazards and the fragility of Louisiana's agricultural systems", size: "tall" },
-    { src: "assets/photos/agu-2025-talk.jpg", event: "AGU25 · New Orleans", caption: "Oral talk: machine-learning reference evapotranspiration for irrigation resilience", size: "wide" }
+    { src: "assets/photos/gsa-2026-1.jpg", focus: "35% 45%", event: "GSA Connects 2026 · Denver", caption: "Presenting my dissertation research on coastal hazard susceptibility", size: "wide" },
+    { src: "assets/photos/gsa-2026-2.jpg", focus: "50% 55%", event: "GSA Connects 2026 · Denver", caption: "Why accurate ML hazard models can still struggle to transfer to new places" },
+    { src: "assets/photos/aag-2026-igif-award.jpg", focus: "50% 45%", event: "AAG 2026 · San Francisco", caption: "AAG International Geographic Information Funds (IGIF) Graduate Research Award", size: "wide" },
+    { src: "assets/photos/aag-2026-badge.jpg", focus: "50% 50%", event: "AAG 2026 · San Francisco", caption: "Paper presenter and AAG award recipient", size: "tall" },
+    { src: "assets/photos/aag-2026-1.jpg", focus: "65% 60%", event: "AAG 2026 · San Francisco", caption: "Oral presentation on machine learning for coastal hazards" },
+    { src: "assets/photos/aag-2026-2.jpg", focus: "72% 60%", event: "AAG 2026 · San Francisco", caption: "Multi-hazard coastal susceptibility mapping in deltaic Louisiana" },
+    { src: "assets/photos/agu-2025-poster.jpg", focus: "40% 50%", event: "AGU25 · New Orleans", caption: "Poster: natural hazards and the fragility of Louisiana's agricultural systems", size: "tall" },
+    { src: "assets/photos/agu-2025-talk.jpg", focus: "20% 70%", event: "AGU25 · New Orleans", caption: "Oral talk: machine-learning reference evapotranspiration for irrigation resilience", size: "wide" }
   ],
 
   // News strip near the top — newest first. Keep 4–6 items.

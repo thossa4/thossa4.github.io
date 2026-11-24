@@ -179,7 +179,7 @@
     $("gallery-grid").innerHTML = gal.map((g, i) => `
       <figure class="gitem ${g.size ? "gitem--" + esc(g.size) : ""} reveal">
         <button type="button" data-i="${i}" aria-label="View photo: ${esc(g.caption)}">
-          <img src="${esc(g.src)}" alt="${esc(g.caption)}" loading="lazy">
+          <img src="${esc(g.src)}" alt="${esc(g.caption)}" loading="lazy"${g.focus ? ` style="object-position:${esc(g.focus)}"` : ""}>
         </button>
         <figcaption><span class="mono">${esc(g.event)}</span>${esc(g.caption)}</figcaption>
       </figure>`).join("");
