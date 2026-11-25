@@ -382,12 +382,6 @@ const SITE = {
       venue: "Book chapter, revised after peer review"
     },
     {
-      type: "review", year: 2026,
-      authors: "Mostafiz, R. B., & Hossain, T.",
-      title: "Advancing Precision Irrigation in Humid Climates: Machine Learning–Driven Reference Evapotranspiration Modeling for Louisiana Agriculture",
-      venue: "Book chapter (submitted)"
-    },
-    {
       type: "prep", year: 2026,
       authors: "Hossain, T., Serinio, M. N., Adusumilli, N., Llones, C., Capuno, C., & Manalo, U.-N.",
       title: "Impact of Agricultural Training on Technical Efficiency of Rice Farmers in the Philippines: A Stochastic Frontier Analysis",
